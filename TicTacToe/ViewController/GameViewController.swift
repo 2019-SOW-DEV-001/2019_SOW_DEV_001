@@ -6,4 +6,6 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
     }
 
+    @IBAction func occupyPosition(_ sender: UIButton) {
+    }
 }
