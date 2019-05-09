@@ -58,6 +58,8 @@ class Game {
     private func declareWinner() {
         if self.currentPlayer == .X {
             self.gameStatus.playerXWins()
+            return
         }
+        self.gameStatus.playerOWins()
     }
 }

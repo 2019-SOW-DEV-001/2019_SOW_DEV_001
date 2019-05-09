@@ -38,6 +38,12 @@ class GameTests: XCTestCase {
         XCTAssertTrue(gameStatus.hasPlayerXWon())
     }
     
+    func test_ShouldCallPlayerOWins_When_PlayerOOccupiesCompleteTopRow() {
+        createMoves(positions: [.middleMiddle, .topLeft, .bottomLeft, .topMiddle, .bottomRight, .topRight])
+        
+        XCTAssertTrue(gameStatus.hasPlayerOWon())
+    }
+    
     private func createMoves(positions: [BoardPosition]) {
         for position in positions {
             game.move(atPosition: position)
@@ -49,6 +55,7 @@ class SpyGameStatus : GameStatus {
     private var positionSavedCalled = false
     private var positionAlreadyOccupiedCalled = false
     private var playerXWinsCalled = false
+    private var playerOWinsCalled = false
     
     func postionSaved() {
         positionSavedCalled = true
@@ -62,6 +69,10 @@ class SpyGameStatus : GameStatus {
         playerXWinsCalled = true
     }
     
+    func playerOWins(){
+        playerOWinsCalled = true
+    }
+    
     fileprivate func isPositionSaved() -> Bool {
         return positionSavedCalled
     }
@@ -72,5 +83,9 @@ class SpyGameStatus : GameStatus {
     
     fileprivate func hasPlayerXWon() -> Bool {
         return playerXWinsCalled
+    }
+    
+    fileprivate func hasPlayerOWon() -> Bool {
+        return playerOWinsCalled
     }
 }
