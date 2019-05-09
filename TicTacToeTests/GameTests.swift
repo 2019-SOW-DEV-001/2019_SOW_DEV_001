@@ -32,18 +32,24 @@ class GameTests: XCTestCase {
         XCTAssertTrue(gameStatus.isPositionAlreadyOccupiedCalled())
     }
     
-    func test_ShouldCallPlayerXWins_When_PlayerXOccupiesCompleteTopRow() {
+    func test_ShouldCallPlayerXWins_When_PlayerXfillsCompleteTopRow() {
         createMoves(positions: [.topLeft, .bottomLeft, .topMiddle, .bottomMiddle, .topRight])
         
         XCTAssertTrue(gameStatus.hasPlayerXWon())
     }
     
-    func test_ShouldCallPlayerOWins_When_PlayerOOccupiesCompleteTopRow() {
+    func test_ShouldCallPlayerOWins_When_PlayerOfillsCompleteTopRow() {
         createMoves(positions: [.middleMiddle, .topLeft, .bottomLeft, .topMiddle, .bottomRight, .topRight])
         
         XCTAssertTrue(gameStatus.hasPlayerOWon())
     }
     
+    func test_ShouldCallPlayerXWins_When_PlayerXfillsCompleteMiddleRow() {
+        createMoves(positions: [.middleLeft, .topLeft, .middleMiddle, .bottomRight, .middleRight])
+        
+        XCTAssertTrue(gameStatus.hasPlayerXWon())
+    }
+
     private func createMoves(positions: [BoardPosition]) {
         for position in positions {
             game.move(atPosition: position)
