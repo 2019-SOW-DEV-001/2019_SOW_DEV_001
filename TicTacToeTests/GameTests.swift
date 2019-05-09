@@ -121,7 +121,13 @@ class GameTests: XCTestCase {
         
         XCTAssertTrue(gameStatus.hasPlayerXWon())
     }
+    
+    func test_ShouldCallPlayerOWins_When_PlayerOfillsDiagonallyFromRight() {
+        createMoves(positions: [ .topLeft, .topRight, .middleRight, .middleMiddle, .bottomMiddle ,.bottomLeft])
         
+        XCTAssertTrue(gameStatus.hasPlayerOWon())
+    }
+    
     private func createMoves(positions: [BoardPosition]) {
         for position in positions {
             game.move(atPosition: position)
