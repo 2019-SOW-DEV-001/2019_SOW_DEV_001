@@ -4,6 +4,7 @@ class GameViewController: UIViewController {
     private var gamePresenter : GamePresenter!
     @IBOutlet private weak var statusIndicator: UILabel!
     private var tappedButton : UIButton!
+    private var buttonCollection : [UIButton] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +19,7 @@ class GameViewController: UIViewController {
     
     @IBAction func occupyPosition(_ sender: UIButton) {
         tappedButton = sender
+        buttonCollection.append(tappedButton)
         gamePresenter.move(atPosition: BoardPosition(rawValue: sender.tag)!)
     }
     
@@ -34,7 +36,14 @@ class GameViewController: UIViewController {
     }
     
     private func reset() {
+      resetPositions()
       gamePresenter.resetGame()
+    }
+    
+    private func resetPositions() {
+        buttonCollection.forEach({ (button) in
+            button.setTitle("-", for: .normal)
+        })
     }
     
 }
