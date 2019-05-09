@@ -1,4 +1,4 @@
-class Game {
+class GamePresenter {
     private var currentPlayer: Player = .X
     private unowned let gameStatus: GameStatus
     private let board = Board()

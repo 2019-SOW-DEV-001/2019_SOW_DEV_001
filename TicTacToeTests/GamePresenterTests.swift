@@ -1,13 +1,13 @@
 import XCTest
 @testable import TicTacToe
 
-class GameTests: XCTestCase {
-    private var game : Game!
+class GamePresenterTests: XCTestCase {
+    private var game : GamePresenter!
     private var gameStatus : SpyGameStatus!
     
     override func setUp() {
         gameStatus = SpyGameStatus()
-        game = Game(gameStatus: gameStatus)
+        game = GamePresenter(gameStatus: gameStatus)
     }
     
     func test_ShouldReturnPlayerX_AsPlayerXAlwaysStartsTheGame() {
