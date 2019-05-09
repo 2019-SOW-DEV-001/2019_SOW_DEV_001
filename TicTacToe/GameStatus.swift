@@ -1,3 +1,3 @@
 protocol GameStatus : AnyObject {
-    func postionOccupied()
+    func postionSaved()
 }

@@ -24,7 +24,7 @@ class Game {
     }
     
     private func mark(_ position: BoardPosition) {
-        self.gameStatus.postionOccupied()
+        self.gameStatus.postionSaved()
     }
     
 }

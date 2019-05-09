@@ -20,18 +20,19 @@ class GameTests: XCTestCase {
         XCTAssertEqual(game.getCurrentPlayer(), Player.O)
     }
     
-    func test_ShouldCallPositionOccupied_When_PlayerXAndPlayerOmakeTheirRespectiveMoves() {
+    func test_ShouldCallPositionSaved_When_PlayerXAndPlayerOmakeTheirRespectiveMoves() {
         game.move(atPosition: .bottomLeft)
         game.move(atPosition: .bottomRight)
         
         XCTAssertTrue(gameStatus.isPositionOccpied())
     }
+    
 }
 
 class SpyGameStatus : GameStatus {
     private var positionTaken = false
     
-    func postionOccupied() {
+    func postionSaved() {
         positionTaken = true
     }
     
