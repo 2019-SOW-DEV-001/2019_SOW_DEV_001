@@ -134,6 +134,14 @@ class GamePresenterTests: XCTestCase {
         XCTAssertTrue(gameStatus.isMatchDraw())
     }
     
+    func test_ShouldReturnPlayerX_When_ItsPlayerOTurnButResetIsDone() {
+        createMoves(positions: [ .topLeft, .topRight, .middleRight])
+        
+        game.resetGame()
+        
+        XCTAssertEqual(game.getCurrentPlayer(), Player.X)
+    }
+    
     private func createMoves(positions: [BoardPosition]) {
         for position in positions {
             game.move(atPosition: position)

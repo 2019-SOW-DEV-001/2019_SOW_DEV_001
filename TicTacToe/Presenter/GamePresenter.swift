@@ -32,6 +32,12 @@ class GamePresenter {
         return self.currentPlayer
     }
     
+    func resetGame() {
+        board.emptyPositions()
+        self.currentPlayer = .X
+        self.gameStatus.indicateNextPlayer()
+    }
+    
     private func rotatePlayer() {
         if self.currentPlayer == .X {
             self.currentPlayer = .O

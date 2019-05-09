@@ -18,5 +18,9 @@ class Board {
     func isComplete() -> Bool {
         return self.filledPositions.keys.count == 9
     }
+    
+    func emptyPositions() {
+        self.filledPositions.removeAll()
+    }
 
 }
