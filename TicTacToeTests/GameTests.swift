@@ -68,6 +68,12 @@ class GameTests: XCTestCase {
         XCTAssertTrue(gameStatus.hasPlayerOWon())
     }
     
+    func test_ShouldCallPlayerXWins_When_PlayerXfillsCompleteFirstColumn() {
+        createMoves(positions: [.topLeft, .topRight, .middleLeft, .middleRight, .bottomLeft])
+        
+        XCTAssertTrue(gameStatus.hasPlayerXWon())
+    }
+    
     private func createMoves(positions: [BoardPosition]) {
         for position in positions {
             game.move(atPosition: position)
