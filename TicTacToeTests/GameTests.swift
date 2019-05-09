@@ -8,4 +8,13 @@ class GameTests: XCTestCase {
         
         XCTAssertEqual(game.getCurrentPlayer(), Player.X)
     }
+    
+    func test_ShouldReturnPlayerO_When_AfterPlayerXcompletesFirstMove() {
+        let game = Game()
+        
+        game.move()
+        
+        XCTAssertEqual(game.getCurrentPlayer(), Player.O)
+    }
+    
 }
