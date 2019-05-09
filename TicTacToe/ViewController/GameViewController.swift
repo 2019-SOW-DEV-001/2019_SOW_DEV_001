@@ -25,6 +25,18 @@ class GameViewController: UIViewController {
         self.statusIndicator.text = "Player " + gamePresenter.getCurrentPlayer().rawValue + " turn"
     }
     
+    private func show(_ message:String) {
+        let alert = UIAlertController(title: "", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+            self.reset()
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    private func reset() {
+      gamePresenter.resetGame()
+    }
+    
 }
 
 extension GameViewController : GameStatus {
@@ -34,15 +46,19 @@ extension GameViewController : GameStatus {
     }
     
     func positionAlreadyOccupied() {
+        return
     }
     
     func playerXWins() {
+        self.show("Player X Wins the Game")
     }
     
     func playerOWins() {
+        self.show("Player O Wins the Game")
     }
     
     func gameDraw() {
+        self.show("Match Draw")
     }
     
     func indicateNextPlayer() {
