@@ -1,5 +1,5 @@
 class WinningRule {
-    private let winningPositions : [[BoardPosition]] = [[.topLeft,.topMiddle,.topRight], [.middleLeft,.middleMiddle,.middleRight],[.bottomLeft,.bottomMiddle,.bottomRight], [.topLeft,.middleLeft,.bottomLeft], [.topMiddle,.middleMiddle,.bottomMiddle]]
+    private let winningPositions : [[BoardPosition]] = [[.topLeft,.topMiddle,.topRight], [.middleLeft,.middleMiddle,.middleRight],[.bottomLeft,.bottomMiddle,.bottomRight], [.topLeft,.middleLeft,.bottomLeft], [.topMiddle,.middleMiddle,.bottomMiddle],[.topRight,.middleRight,.bottomRight]]
     
     func doesSatisfy(occupiedPositions: [BoardPosition]) -> Bool {
         for singleWinPossibility in winningPositions {
