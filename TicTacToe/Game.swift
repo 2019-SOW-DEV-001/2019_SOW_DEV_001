@@ -35,6 +35,6 @@ class Game {
     }
     
     private func isOccupied(_ position: BoardPosition) -> Bool {
-        return board.getFilledPositions().keys.contains(position)
+        return board.isPositionOccupied(position: position)
     }
 }

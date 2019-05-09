@@ -10,5 +10,9 @@ class Board {
     func getFilledPositions() -> positionsWithPlayer {
         return self.filledPositions;
     }
+    
+    func isPositionOccupied(position: BoardPosition) -> Bool {
+        return self.filledPositions.keys.contains(position)
+    }
 
 }
