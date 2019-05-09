@@ -24,21 +24,20 @@ class GameTests: XCTestCase {
         game.move(atPosition: .bottomLeft)
         game.move(atPosition: .bottomRight)
         
-        XCTAssertTrue(gameStatus.isPositionOccpied())
+        XCTAssertTrue(gameStatus.isPositionSaved())
     }
-    
+ 
 }
 
 class SpyGameStatus : GameStatus {
-    private var positionTaken = false
+    private var positionSavedCalled = false
     
     func postionSaved() {
-        positionTaken = true
+        positionSavedCalled = true
     }
-    
-    fileprivate func isPositionOccpied() -> Bool {
-        return positionTaken
+
+    fileprivate func isPositionSaved() -> Bool {
+        return positionSavedCalled
     }
-    
-    
+
 }
