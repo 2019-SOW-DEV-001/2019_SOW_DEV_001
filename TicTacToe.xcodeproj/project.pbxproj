@@ -12,8 +12,9 @@
 		892F87382284BCB800B45446 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 892F87362284BCB800B45446 /* Main.storyboard */; };
 		892F873A2284BCB900B45446 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 892F87392284BCB900B45446 /* Assets.xcassets */; };
 		892F873D2284BCB900B45446 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 892F873B2284BCB900B45446 /* LaunchScreen.storyboard */; };
-		892F87482284BCB900B45446 /* TicTacToeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892F87472284BCB900B45446 /* TicTacToeTests.swift */; };
+		892F87482284BCB900B45446 /* GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892F87472284BCB900B45446 /* GameTests.swift */; };
 		892F87532284BCB900B45446 /* TicTacToeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892F87522284BCB900B45446 /* TicTacToeUITests.swift */; };
+		892F87612284BD5800B45446 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892F87602284BD5800B45446 /* Game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,11 +43,12 @@
 		892F873C2284BCB900B45446 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		892F873E2284BCB900B45446 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		892F87432284BCB900B45446 /* TicTacToeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TicTacToeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		892F87472284BCB900B45446 /* TicTacToeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeTests.swift; sourceTree = "<group>"; };
+		892F87472284BCB900B45446 /* GameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTests.swift; sourceTree = "<group>"; };
 		892F87492284BCB900B45446 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		892F874E2284BCB900B45446 /* TicTacToeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TicTacToeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		892F87522284BCB900B45446 /* TicTacToeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeUITests.swift; sourceTree = "<group>"; };
 		892F87542284BCB900B45446 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		892F87602284BD5800B45446 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				892F87392284BCB900B45446 /* Assets.xcassets */,
 				892F873B2284BCB900B45446 /* LaunchScreen.storyboard */,
 				892F873E2284BCB900B45446 /* Info.plist */,
+				892F87602284BD5800B45446 /* Game.swift */,
 			);
 			path = TicTacToe;
 			sourceTree = "<group>";
@@ -110,7 +113,7 @@
 		892F87462284BCB900B45446 /* TicTacToeTests */ = {
 			isa = PBXGroup;
 			children = (
-				892F87472284BCB900B45446 /* TicTacToeTests.swift */,
+				892F87472284BCB900B45446 /* GameTests.swift */,
 				892F87492284BCB900B45446 /* Info.plist */,
 			);
 			path = TicTacToeTests;
@@ -257,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				892F87352284BCB800B45446 /* ViewController.swift in Sources */,
+				892F87612284BD5800B45446 /* Game.swift in Sources */,
 				892F87332284BCB800B45446 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,7 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				892F87482284BCB900B45446 /* TicTacToeTests.swift in Sources */,
+				892F87482284BCB900B45446 /* GameTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
