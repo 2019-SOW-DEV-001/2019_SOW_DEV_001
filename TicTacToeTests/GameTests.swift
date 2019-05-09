@@ -15,25 +15,28 @@ class GameTests: XCTestCase {
     }
     
     func test_ShouldReturnPlayerO_When_AfterPlayerXcompletesFirstMove() {
-        game.move(atPosition: .bottomLeft)
+        createMoves(positions: [.topLeft])
         
         XCTAssertEqual(game.getCurrentPlayer(), Player.O)
     }
     
     func test_ShouldCallPositionSaved_When_PlayerXAndPlayerOmakeTheirRespectiveMoves() {
-        game.move(atPosition: .bottomLeft)
-        game.move(atPosition: .bottomRight)
+        createMoves(positions: [.topLeft, .topRight])
         
         XCTAssertTrue(gameStatus.isPositionSaved())
     }
  
     func test_ShouldCallPositionAlreadyOccupied_When_PlayerXmakesAMoveAndPlayerOTriesToOccupySamePosition() {
-        game.move(atPosition: .bottomLeft)
-        game.move(atPosition: .bottomLeft)
+        createMoves(positions: [.topLeft, .topLeft])
         
         XCTAssertTrue(gameStatus.isPositionAlreadyOccupiedCalled())
     }
     
+    private func createMoves(positions: [BoardPosition]) {
+        for position in positions {
+            game.move(atPosition: position)
+        }
+    }
 }
 
 class SpyGameStatus : GameStatus {
