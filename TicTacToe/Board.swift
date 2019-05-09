@@ -14,5 +14,9 @@ class Board {
     func isPositionOccupied(position: BoardPosition) -> Bool {
         return self.filledPositions.keys.contains(position)
     }
+    
+    func isComplete() -> Bool {
+        return self.filledPositions.keys.count == 9
+    }
 
 }

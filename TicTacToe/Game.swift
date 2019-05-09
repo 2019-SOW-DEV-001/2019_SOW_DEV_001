@@ -20,6 +20,10 @@ class Game {
             return
         }
         
+        if isADraw() {
+            self.gameStatus.gameDraw()
+            return
+        }
         
         rotatePlayer()
     }
@@ -43,6 +47,10 @@ class Game {
     
     private func isOccupied(_ position: BoardPosition) -> Bool {
         return board.isPositionOccupied(position: position)
+    }
+    
+    private func isADraw() -> Bool {
+        return board.isComplete()
     }
     
     private func isAWin() -> Bool {

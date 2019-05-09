@@ -128,6 +128,12 @@ class GameTests: XCTestCase {
         XCTAssertTrue(gameStatus.hasPlayerOWon())
     }
     
+    func test_ShouldCallGameDraw_When_AllPositionsAreOccupiedButNOWin() {
+        createMoves(positions: [.topLeft, .topMiddle, .topRight, .middleRight, .middleLeft, .bottomLeft, .bottomMiddle ,.bottomRight, .middleMiddle])
+        
+        XCTAssertTrue(gameStatus.isMatchDraw())
+    }
+    
     private func createMoves(positions: [BoardPosition]) {
         for position in positions {
             game.move(atPosition: position)
@@ -140,6 +146,7 @@ class SpyGameStatus : GameStatus {
     private var positionAlreadyOccupiedCalled = false
     private var playerXWinsCalled = false
     private var playerOWinsCalled = false
+    private var matchDrawCalled = false
     
     func postionSaved() {
         positionSavedCalled = true
@@ -157,6 +164,10 @@ class SpyGameStatus : GameStatus {
         playerOWinsCalled = true
     }
     
+    func gameDraw() {
+        matchDrawCalled = true
+    }
+    
     fileprivate func isPositionSaved() -> Bool {
         return positionSavedCalled
     }
@@ -171,5 +182,9 @@ class SpyGameStatus : GameStatus {
     
     fileprivate func hasPlayerOWon() -> Bool {
         return playerOWinsCalled
+    }
+    
+    fileprivate func isMatchDraw() -> Bool {
+        return matchDrawCalled
     }
 }
