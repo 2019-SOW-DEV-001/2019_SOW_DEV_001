@@ -1,7 +1,13 @@
 class Game {
-    private var currentPlayer : Player = .X
+    private var currentPlayer: Player = .X
+    private unowned let gameStatus: GameStatus
     
-    func move() {
+    init(gameStatus: GameStatus) {
+        self.gameStatus = gameStatus
+    }
+    
+    func move(atPosition: BoardPosition) {
+        mark(atPosition)
         rotatePlayer()
     }
     
@@ -15,6 +21,10 @@ class Game {
             return
         }
         self.currentPlayer = .X
+    }
+    
+    private func mark(_ position: BoardPosition) {
+        self.gameStatus.postionOccupied()
     }
     
 }

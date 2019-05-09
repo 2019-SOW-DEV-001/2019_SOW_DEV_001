@@ -16,6 +16,8 @@
 		892F87532284BCB900B45446 /* TicTacToeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892F87522284BCB900B45446 /* TicTacToeUITests.swift */; };
 		892F87612284BD5800B45446 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892F87602284BD5800B45446 /* Game.swift */; };
 		892F87632284BE1C00B45446 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892F87622284BE1C00B45446 /* Player.swift */; };
+		892F87652284C20200B45446 /* BoardPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892F87642284C20200B45446 /* BoardPosition.swift */; };
+		892F87672284C29400B45446 /* GameStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892F87662284C29400B45446 /* GameStatus.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		892F87542284BCB900B45446 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		892F87602284BD5800B45446 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		892F87622284BE1C00B45446 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		892F87642284C20200B45446 /* BoardPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardPosition.swift; sourceTree = "<group>"; };
+		892F87662284C29400B45446 /* GameStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStatus.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,8 @@
 				892F873E2284BCB900B45446 /* Info.plist */,
 				892F87602284BD5800B45446 /* Game.swift */,
 				892F87622284BE1C00B45446 /* Player.swift */,
+				892F87642284C20200B45446 /* BoardPosition.swift */,
+				892F87662284C29400B45446 /* GameStatus.swift */,
 			);
 			path = TicTacToe;
 			sourceTree = "<group>";
@@ -263,6 +269,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				892F87632284BE1C00B45446 /* Player.swift in Sources */,
+				892F87672284C29400B45446 /* GameStatus.swift in Sources */,
+				892F87652284C20200B45446 /* BoardPosition.swift in Sources */,
 				892F87352284BCB800B45446 /* ViewController.swift in Sources */,
 				892F87612284BD5800B45446 /* Game.swift in Sources */,
 				892F87332284BCB800B45446 /* AppDelegate.swift in Sources */,
