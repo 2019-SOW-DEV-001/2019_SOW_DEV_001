@@ -122,6 +122,12 @@
                                     <action selector="occupyPosition:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CUt-M0-iHe"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dF-j2-Vu4">
+                                <rect key="frame" x="16" y="137" width="343" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lWU-qV-cY5">
                                 <rect key="frame" x="150" y="376" width="75" height="75"/>
                                 <color key="backgroundColor" red="1" green="0.6309779338" blue="0.6510926373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -138,11 +144,14 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4dF-j2-Vu4" secondAttribute="trailing" constant="16" id="1rR-5z-aUZ"/>
                             <constraint firstItem="NrP-a3-SB8" firstAttribute="leading" secondItem="NMo-kR-h3y" secondAttribute="trailing" constant="5" id="3Ns-C8-wpL"/>
                             <constraint firstItem="Anr-4d-bgW" firstAttribute="leading" secondItem="PlM-S8-qfM" secondAttribute="trailing" constant="5" id="8bh-9F-uG3"/>
                             <constraint firstItem="PlM-S8-qfM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9wL-VD-ZRx"/>
                             <constraint firstItem="MWu-nn-plh" firstAttribute="centerY" secondItem="cRb-3P-K6C" secondAttribute="centerY" id="AHw-LK-V7E"/>
+                            <constraint firstItem="4dF-j2-Vu4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="BHE-AV-xns"/>
                             <constraint firstItem="lWU-qV-cY5" firstAttribute="centerX" secondItem="PlM-S8-qfM" secondAttribute="centerX" id="D24-aK-9i0"/>
+                            <constraint firstItem="NrP-a3-SB8" firstAttribute="top" secondItem="4dF-j2-Vu4" secondAttribute="bottom" constant="49" id="ECR-qK-Wf7"/>
                             <constraint firstItem="Maw-Bk-Ulq" firstAttribute="leading" secondItem="NrP-a3-SB8" secondAttribute="trailing" constant="5" id="ERu-jT-gPP"/>
                             <constraint firstItem="lWU-qV-cY5" firstAttribute="leading" secondItem="cRb-3P-K6C" secondAttribute="trailing" constant="5" id="QOE-YS-SKO"/>
                             <constraint firstItem="PlM-S8-qfM" firstAttribute="leading" secondItem="eTO-fd-plT" secondAttribute="trailing" constant="5" id="VKB-gw-HAG"/>
@@ -159,6 +168,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="statusIndicator" destination="4dF-j2-Vu4" id="4s2-xr-YYQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

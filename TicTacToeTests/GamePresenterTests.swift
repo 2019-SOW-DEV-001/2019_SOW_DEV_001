@@ -168,6 +168,10 @@ class SpyGameStatus : GameStatus {
         matchDrawCalled = true
     }
     
+    func indicateNextPlayer() {
+        
+    }
+    
     fileprivate func isPositionSaved() -> Bool {
         return positionSavedCalled
     }

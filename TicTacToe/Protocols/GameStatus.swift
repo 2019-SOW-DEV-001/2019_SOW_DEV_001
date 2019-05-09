@@ -4,4 +4,5 @@ protocol GameStatus : AnyObject {
     func playerXWins()
     func playerOWins()
     func gameDraw()
+    func indicateNextPlayer()
 }

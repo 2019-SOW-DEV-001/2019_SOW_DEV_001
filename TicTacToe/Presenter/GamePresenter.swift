@@ -35,9 +35,11 @@ class GamePresenter {
     private func rotatePlayer() {
         if self.currentPlayer == .X {
             self.currentPlayer = .O
+            self.gameStatus.indicateNextPlayer()
             return
         }
         self.currentPlayer = .X
+        self.gameStatus.indicateNextPlayer()
     }
     
     private func mark(_ position: BoardPosition) {
