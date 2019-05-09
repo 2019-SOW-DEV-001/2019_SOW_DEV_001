@@ -19,6 +19,7 @@
 		892F87652284C20200B45446 /* BoardPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892F87642284C20200B45446 /* BoardPosition.swift */; };
 		892F87672284C29400B45446 /* GameStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892F87662284C29400B45446 /* GameStatus.swift */; };
 		892F87692284C6F700B45446 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892F87682284C6F700B45446 /* Board.swift */; };
+		892F876B2284CAB300B45446 /* WinningRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892F876A2284CAB300B45446 /* WinningRule.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		892F87642284C20200B45446 /* BoardPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardPosition.swift; sourceTree = "<group>"; };
 		892F87662284C29400B45446 /* GameStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStatus.swift; sourceTree = "<group>"; };
 		892F87682284C6F700B45446 /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+		892F876A2284CAB300B45446 /* WinningRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinningRule.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				892F87642284C20200B45446 /* BoardPosition.swift */,
 				892F87662284C29400B45446 /* GameStatus.swift */,
 				892F87682284C6F700B45446 /* Board.swift */,
+				892F876A2284CAB300B45446 /* WinningRule.swift */,
 			);
 			path = TicTacToe;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				892F87352284BCB800B45446 /* ViewController.swift in Sources */,
 				892F87692284C6F700B45446 /* Board.swift in Sources */,
 				892F87612284BD5800B45446 /* Game.swift in Sources */,
+				892F876B2284CAB300B45446 /* WinningRule.swift in Sources */,
 				892F87332284BCB800B45446 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

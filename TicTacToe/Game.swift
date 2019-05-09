@@ -14,6 +14,13 @@ class Game {
         }
         
         mark(atPosition)
+        
+        if isAWin() {
+            declareWinner()
+            return
+        }
+        
+        
         rotatePlayer()
     }
     
@@ -36,5 +43,21 @@ class Game {
     
     private func isOccupied(_ position: BoardPosition) -> Bool {
         return board.isPositionOccupied(position: position)
+    }
+    
+    private func isAWin() -> Bool {
+        let winningRule = WinningRule()
+        return winningRule.doesSatisfy(occupiedPositions: extractPositionsOfCurrentPlayer())
+    }
+    
+    private func extractPositionsOfCurrentPlayer() -> [BoardPosition] {
+        let positionOccupiedByCurrentPlayer = board.getFilledPositions().filter { $0.value == self.currentPlayer}
+        return Array(positionOccupiedByCurrentPlayer.keys)
+    }
+    
+    private func declareWinner() {
+        if self.currentPlayer == .X {
+            self.gameStatus.playerXWins()
+        }
     }
 }

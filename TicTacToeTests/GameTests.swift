@@ -32,6 +32,12 @@ class GameTests: XCTestCase {
         XCTAssertTrue(gameStatus.isPositionAlreadyOccupiedCalled())
     }
     
+    func test_ShouldCallPlayerXWins_When_PlayerXOccupiesCompleteTopRow() {
+        createMoves(positions: [.topLeft, .bottomLeft, .topMiddle, .bottomMiddle, .topRight])
+        
+        XCTAssertTrue(gameStatus.hasPlayerXWon())
+    }
+    
     private func createMoves(positions: [BoardPosition]) {
         for position in positions {
             game.move(atPosition: position)
@@ -42,6 +48,7 @@ class GameTests: XCTestCase {
 class SpyGameStatus : GameStatus {
     private var positionSavedCalled = false
     private var positionAlreadyOccupiedCalled = false
+    private var playerXWinsCalled = false
     
     func postionSaved() {
         positionSavedCalled = true
@@ -51,11 +58,19 @@ class SpyGameStatus : GameStatus {
         positionAlreadyOccupiedCalled = true
     }
     
+    func playerXWins() {
+        playerXWinsCalled = true
+    }
+    
     fileprivate func isPositionSaved() -> Bool {
         return positionSavedCalled
     }
     
     fileprivate func isPositionAlreadyOccupiedCalled() -> Bool {
         return positionAlreadyOccupiedCalled
+    }
+    
+    fileprivate func hasPlayerXWon() -> Bool {
+        return playerXWinsCalled
     }
 }
