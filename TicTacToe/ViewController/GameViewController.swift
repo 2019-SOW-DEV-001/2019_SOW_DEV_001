@@ -1,14 +1,19 @@
 import UIKit
 
 class GameViewController: UIViewController {
-    private var boardPresenter : GamePresenter!
+    private var gamePresenter : GamePresenter!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        boardPresenter = GamePresenter(gameStatus: self)
+        startTheGame()
     }
 
+    private func startTheGame() {
+        gamePresenter = GamePresenter(gameStatus: self)
+    }
+    
     @IBAction func occupyPosition(_ sender: UIButton) {
+        gamePresenter.move(atPosition: BoardPosition(rawValue: sender.tag)!)
     }
 }
 
