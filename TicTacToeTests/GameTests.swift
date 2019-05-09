@@ -27,17 +27,32 @@ class GameTests: XCTestCase {
         XCTAssertTrue(gameStatus.isPositionSaved())
     }
  
+    func test_ShouldCallPositionAlreadyOccupied_When_PlayerXmakesAMoveAndPlayerOTriesToOccupySamePosition() {
+        game.move(atPosition: .bottomLeft)
+        game.move(atPosition: .bottomLeft)
+        
+        XCTAssertTrue(gameStatus.isPositionAlreadyOccupiedCalled())
+    }
+    
 }
 
 class SpyGameStatus : GameStatus {
     private var positionSavedCalled = false
+    private var positionAlreadyOccupiedCalled = false
     
     func postionSaved() {
         positionSavedCalled = true
     }
-
+    
+    func positionAlreadyOccupied() {
+        positionAlreadyOccupiedCalled = true
+    }
+    
     fileprivate func isPositionSaved() -> Bool {
         return positionSavedCalled
     }
-
+    
+    fileprivate func isPositionAlreadyOccupiedCalled() -> Bool {
+        return positionAlreadyOccupiedCalled
+    }
 }
