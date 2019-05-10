@@ -42,4 +42,14 @@ class TicTacToeUITests: XCTestCase {
         XCTAssertTrue(app.alerts.staticTexts["Match Draw"].exists)
     }
     
+    func testShouldShowAlertWithTextPlayerOWinstheGameWhenTopRowIsOccupiedByO() {
+        let app = XCUIApplication()
+        app.buttons["middleLeft"].tap()
+        app.buttons["leftTop"].tap()
+        app.buttons["middleMiddle"].tap()
+        app.buttons["middleTop"].tap()
+        app.buttons["bottomLeft"].tap()
+        app.buttons["rightTop"].tap()
+        XCTAssertTrue(app.alerts.staticTexts["Player O Wins the Game"].exists)
+    }
 }
