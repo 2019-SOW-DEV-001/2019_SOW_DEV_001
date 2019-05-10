@@ -15,12 +15,13 @@ If all nine squares are filled and neither player has three in a row, the game i
 
 # Techincal Details
 
-IDE - Xcode version 10.1
-Deployment Target - 12.1
-Swift Language Version - 4.2
+IDE - Xcode version 10.1, 
+Deployment Target - 12.1, 
+Swift Language Version - 4.2,
 
 # Apllication Support
 Only Simulator - iPhone 5S to iPhone XS MAX
+Orientation - Only Portrait
 
 # Folder Structure
 -> Protocols
