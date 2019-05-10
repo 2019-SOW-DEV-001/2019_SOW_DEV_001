@@ -40,3 +40,7 @@ Test Driven Development
 
 # How to run the project
 Checkout the project and run the application is Simulator
+Game will appear. X plays first followed by O.
+The app will present the result of the game in a PopUp.
+Any way during the game there is a provision to reset the game.
+
