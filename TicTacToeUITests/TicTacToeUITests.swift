@@ -17,5 +17,15 @@ class TicTacToeUITests: XCTestCase {
         XCTAssertTrue(app.alerts.staticTexts["Player X Wins the Game"].exists)
     }
     
+    func testShouldShowAlertWithTextPlayerXWinstheGameWhenSecondRowIsOccupiedByX() {
+        
+        let app = XCUIApplication()
+        app.buttons["middleLeft"].tap()
+        app.buttons["leftTop"].tap()
+        app.buttons["middleMiddle"].tap()
+        app.buttons["middleTop"].tap()
+        app.buttons["middleRight"].tap()
+        XCTAssertTrue(app.alerts.staticTexts["Player X Wins the Game"].exists)
+    }
     
 }
