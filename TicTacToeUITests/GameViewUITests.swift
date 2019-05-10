@@ -1,6 +1,6 @@
 import XCTest
 
-class TicTacToeUITests: XCTestCase {
+class GameViewUITests: XCTestCase {
 
     override func setUp() {
         super.setUp()
