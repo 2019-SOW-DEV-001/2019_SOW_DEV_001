@@ -11,7 +11,6 @@ class GameViewController: UIViewController {
         startTheGame()
     }
 
-    
     private func startTheGame() {
         gamePresenter = GamePresenter(gameStatus: self)
         showStatus()
@@ -40,12 +39,15 @@ class GameViewController: UIViewController {
       gamePresenter.resetGame()
     }
     
+    @IBAction func manualReset(_ sender: Any) {
+        reset()
+    }
+    
     private func resetPositions() {
         buttonCollection.forEach({ (button) in
             button.setTitle("-", for: .normal)
         })
     }
-    
 }
 
 extension GameViewController : GameStatus {
